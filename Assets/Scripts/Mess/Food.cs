@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Food : MonoBehaviour
 {
-    const int TRASH_LAYER = 8;
+    public const int TRASH_LAYER = 8;
     public float nutrition;
     public float poison;
     // Start is called before the first frame update
@@ -30,5 +30,13 @@ public class Food : MonoBehaviour
             Random.insideUnitCircle.normalized, point, ForceMode2D.Impulse
         );
         // Debug.Log( "World point " + point );
+    }
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.layer != TRASH_LAYER)
+            return;
+
+        Destroy(gameObject);
     }
 }

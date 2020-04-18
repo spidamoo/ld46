@@ -36,14 +36,12 @@ public class King : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        Debug.Log("GameObject1 collided with " + col.name);
+        if (col.gameObject.layer == Food.TRASH_LAYER)
+            return;
+
+        Debug.Log("King enter " + col.name);
         var food = col.GetComponent<Food>();
         hunger += food.nutrition;
         health -= food.poison;
-    }
-    void OnTriggerExit2D(Collider2D other)
-    {
-        Debug.Log("exit " + other);
-        Destroy(other.gameObject);
     }
 }

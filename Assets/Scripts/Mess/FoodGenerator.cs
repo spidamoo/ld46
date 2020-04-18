@@ -6,6 +6,7 @@ public class FoodGenerator : MonoBehaviour
 {
     public List<GameObject> foodOptions;
     public AnimationCurve delayUntilNext;
+    public int foodLeft = 20;
 
     private float nextIn = 0.0f;
     // Start is called before the first frame update
@@ -19,8 +20,12 @@ public class FoodGenerator : MonoBehaviour
     {
         if (nextIn < 0.0f)
         {
-            SpawnFood();
-            nextIn = delayUntilNext.Evaluate(Random.value);
+            if (foodLeft > 0)
+            {
+                foodLeft--;
+                SpawnFood();
+                nextIn = delayUntilNext.Evaluate(Random.value);
+            }
         }
         else
         {

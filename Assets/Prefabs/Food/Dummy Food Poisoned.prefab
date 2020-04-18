@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 7134723974241738835}
   - component: {fileID: 7134723974241738863}
   m_Layer: 0
-  m_Name: Food
-  m_TagString: Untagged
+  m_Name: Dummy Food Poisoned
+  m_TagString: Food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 24a312941489b2744837f66b82cec700, type: 3}
-  m_Color: {r: 0, g: 1, b: 0.04445076, a: 1}
+  m_Color: {r: 1, g: 0.06575353, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -143,5 +143,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66eca12dde3a3c94eaa52c7487dfe4ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nutrition: 1
-  poison: 0
+  nutrition: 0.1
+  poison: 2
