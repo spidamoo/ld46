@@ -1,7 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
+using UnityEngine.UI;
+
 
 [Serializable]
 public class SpriteList
@@ -18,10 +20,12 @@ public class AnimatedSprite : MonoBehaviour
     public float animationProgress;
 
     private SpriteRenderer spriteRenderer;
+    private Image uiImage;
     // Start is called before the first frame update
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        uiImage = GetComponent<Image>();
 
         Update();
     }
@@ -38,6 +42,13 @@ public class AnimatedSprite : MonoBehaviour
             // Debug.Log(string.Format("index {0} {1} {2}", currentListIndex, animationProgress, spriteIndex));
             return;
         }
-        spriteRenderer.sprite = spriteLists[currentListIndex].sprites[spriteIndex];
+        if (spriteRenderer)
+        {
+            spriteRenderer.sprite = spriteLists[currentListIndex].sprites[spriteIndex];
+        }
+        if (uiImage)
+        {
+            uiImage.sprite = spriteLists[currentListIndex].sprites[spriteIndex];
+        }
     }
 }

@@ -7,6 +7,7 @@ public class FoodGenerator : MonoBehaviour
     public List<GameObject> foodOptions;
     public AnimationCurve delayUntilNext;
     public int foodLeft = 20;
+    public float conveyorSpeed = 1.0f;
 
     private float nextIn = 0.0f;
     // Start is called before the first frame update

@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5442020531256576869
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5442020531256576870}
+  - component: {fileID: 5442020531256576871}
+  m_Layer: 0
+  m_Name: Lvl1 generator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5442020531256576870
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5442020531256576869}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.93, y: 0.58, z: -0.28125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5442020531256576871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5442020531256576869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ae0c73ae6d271f42931e87bec9b9b57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foodOptions:
+  - {fileID: 7134723974241738834, guid: dd5a9284899c3094d828acfe14b3f3ff, type: 3}
+  - {fileID: 7134723974241738834, guid: 1ea021d20cf661248a2d878c60bda94d, type: 3}
+  - {fileID: 7134723974241738834, guid: 958d96e5fd894054aa76f25932612be0, type: 3}
+  - {fileID: 7134723974241738834, guid: 1ec5c48066b21654698131508f993801, type: 3}
+  - {fileID: 7134723974241738834, guid: 8af64557843fc244988b7bd88c8d1002, type: 3}
+  - {fileID: 7134723974241738834, guid: a3a730ba973d1754b82e6e10c1fcdf07, type: 3}
+  - {fileID: 7134723974241738834, guid: 5e0234eebdb36644e915e0f759a0fc2a, type: 3}
+  - {fileID: 7134723974241738834, guid: 5db7a40d605b8254a9d4943da6f2340d, type: 3}
+  - {fileID: 7134723974241738834, guid: 95b704f5079df6543b832946f42b7a59, type: 3}
+  - {fileID: 7134723974241738834, guid: ce64f590a252c3f4fb04fb17af1a661c, type: 3}
+  - {fileID: 7134723974241738834, guid: 246707e0b3ec0cc4ba769f3827aed14f, type: 3}
+  - {fileID: 7134723974241738834, guid: 8c3ba7a8c62d05b40aba8c1ee97cba56, type: 3}
+  - {fileID: 7134723974241738834, guid: 3b0db7ecb4604c046aa4c2399ea4d93e, type: 3}
+  - {fileID: 7134723974241738834, guid: d9e23d1119c0f1242b0398a23f6079a1, type: 3}
+  - {fileID: 7134723974241738834, guid: 6d9e5dbb61565a44f96651cda729c562, type: 3}
+  - {fileID: 7134723974241738834, guid: 43b3ee94550de614c9e6b15d71525bc0, type: 3}
+  - {fileID: 7134723974241738834, guid: 87f8f955b78e5634e906c8578531fa52, type: 3}
+  - {fileID: 7134723974241738834, guid: 0343d3fee70722e4ebcb7fea5aeb6288, type: 3}
+  - {fileID: 7134723974241738834, guid: f861f5c549e0df2489f3d692a0404bb7, type: 3}
+  - {fileID: 7134723974241738834, guid: 9a3bf6f9941e7ee43bfde91978243a8a, type: 3}
+  - {fileID: 7134723974241738834, guid: cca43b02a62cc5c4da33ef6914911b76, type: 3}
+  - {fileID: 7134723974241738834, guid: d714777ad8ffda149ab025c5bd065618, type: 3}
+  - {fileID: 7134723974241738834, guid: 120bd396019f81f4b9e6dcb2e0d35da2, type: 3}
+  - {fileID: 7134723974241738834, guid: 016ad6193822e9146a9ebbf466a60f4f, type: 3}
+  delayUntilNext:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 2
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  foodLeft: 20
+  conveyorSpeed: 1

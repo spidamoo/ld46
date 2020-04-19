@@ -13,7 +13,17 @@ public class King : MonoBehaviour
 
     public Image hungerBar;
     public Image healthBar;
-    // Start is called before the first frame update
+
+    private Animator animator;
+    private Collider2D plateCollider;
+    private int foodLayerMask;
+
+    void Awake()
+    {
+        animator = GetComponent<Animator>();
+        plateCollider = transform.Find("Plate").GetComponent<Collider2D>();
+        foodLayerMask = LayerMask.GetMask("Default");
+    }
     void Start()
     {
         health = maxHealth;
@@ -32,6 +42,8 @@ public class King : MonoBehaviour
 
         hungerBar.fillAmount = hunger / maxHunger;
         healthBar.fillAmount = health / maxHealth;
+
+        animator.SetBool( "has food on plate", plateCollider.IsTouchingLayers(foodLayerMask) );
     }
 
     void OnTriggerEnter2D(Collider2D col)
@@ -43,5 +55,13 @@ public class King : MonoBehaviour
         var food = col.GetComponent<Food>();
         hunger += food.nutrition;
         health -= food.poison;
+    }
+    void OnTriggerExit2D(Collider2D col)
+    {
+        if (col.gameObject.layer == Food.TRASH_LAYER)
+            return;
+
+        Debug.Log("King exit " + col.name);
+        Destroy(col.gameObject);
     }
 }

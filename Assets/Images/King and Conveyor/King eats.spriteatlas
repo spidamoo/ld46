@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: King eats
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 4096
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: ee4d487d2038b154f862b10fa6ab8a53, type: 3}
+    totalSpriteSurfaceArea: 7840000
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 04419aa081821ed4d803ea21118b68ad, type: 3}
+  - {fileID: 21300000, guid: 4b2ec5111998273438ae475a817c18f6, type: 3}
+  - {fileID: 21300000, guid: da6a9763a915b254883d5459587efefb, type: 3}
+  - {fileID: 21300000, guid: 2aff94f39dcb3724b8bda2bc32b21852, type: 3}
+  - {fileID: 21300000, guid: 914898845d783d24795a3dd97c7c4b2e, type: 3}
+  - {fileID: 21300000, guid: 796f1b9480d0e86429a95b48c005d2a6, type: 3}
+  - {fileID: 21300000, guid: d6a7be95c49db004891a6e6332ab4d43, type: 3}
+  - {fileID: 21300000, guid: bcd368e59692a4d4ca0dbff3105bcf59, type: 3}
+  - {fileID: 21300000, guid: fe815ff543edfb748a02a0747b31f83d, type: 3}
+  - {fileID: 21300000, guid: 31ce75e67d0c0d34c9ab193e8c6651a7, type: 3}
+  - {fileID: 21300000, guid: 9a75db4a3802e044f88800e5a2a997d6, type: 3}
+  - {fileID: 21300000, guid: 907e2c4b345687045b447e229d22667e, type: 3}
+  - {fileID: 21300000, guid: a95f554c707770f4ea58c04ea5ba0785, type: 3}
+  - {fileID: 21300000, guid: 56c3a91d9ef9d334493c0cefe833b878, type: 3}
+  - {fileID: 21300000, guid: a04977cd74b1d1c4295bf58cbc1f1400, type: 3}
+  - {fileID: 21300000, guid: 0b0061ee0a2f8bd4dbb8c33ebb044f44, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - kingfateat-Sheet12
+  - kingfateat-Sheet11
+  - kingfateat-Sheet3
+  - kingfateat-Sheet8
+  - kingfateat-Sheet9DOWN
+  - kingfateat-Sheet9
+  - kingfateat-Sheet7
+  - kingfateat-Sheet5
+  - kingfateat-Sheet6
+  - kingfateat-Sheet9UP
+  - kingfateat-Sheet2
+  - kingfateat-Sheet14
+  - kingfateat-Sheet10
+  - kingfateat-Sheet4
+  - kingfateat-Sheet1
+  - kingfateat-Sheet13
+  m_Tag: King eats
+  m_IsVariant: 0

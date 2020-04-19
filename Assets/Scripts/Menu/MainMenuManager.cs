@@ -19,6 +19,11 @@ public class MainMenuManager : MonoBehaviour
 
     public void StartGame()
     {
+        var curtainAnimator = GameObject.Find("Canvas/Curtain").GetComponent<Animator>();
+        curtainAnimator.SetTrigger("fadein");
+    }
+    public void LoadDialogScene()
+    {
         SceneManager.LoadScene("DialogScene");
     }
 }

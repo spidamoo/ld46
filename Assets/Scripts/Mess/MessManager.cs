@@ -8,14 +8,18 @@ public class MessManager : MonoBehaviour
     private GameManager gameManager;
     private FoodGenerator generator;
     private King theKing;
+    private bool levelFinished = false;
     void Awake()
     {
+        theKing = GameObject.Find("The King").GetComponent<King>();
         var gmo = GameObject.Find("GameManager");
         if (gmo)
         {
             gameManager = gmo.GetComponent<GameManager>();
             Destroy( GameObject.Find("Food Generator") );
+            var oldGenerator = GameObject.Find("Food Generator").GetComponent<FoodGenerator>();
             generator = Instantiate( gameManager.levels[gameManager.currentLevel].foodGenerator ).GetComponent<FoodGenerator>();
+            generator.transform.position = oldGenerator.transform.position;
 
             gameManager.failed = false;
         }
@@ -24,7 +28,7 @@ public class MessManager : MonoBehaviour
             generator = GameObject.Find("Food Generator").GetComponent<FoodGenerator>();
         }
 
-        theKing = GameObject.Find("The King").GetComponent<King>();
+        theKing.GetComponent<Animator>().SetFloat("open mouth speed", generator.conveyorSpeed);
     }
     void Start()
     {
@@ -35,12 +39,7 @@ public class MessManager : MonoBehaviour
     {
         if ( generator.foodLeft <= 0 && !IsThereActiveFood() )
         {
-            var curtainAnimator = GameObject.Find("Canvas/Curtain").GetComponent<Animator>();
-            curtainAnimator.SetTrigger("fadein");
-            if ( curtainAnimator.GetCurrentAnimatorStateInfo(0).IsName("Dark") )
-            {
-                FinishLevel();
-            }
+            FinishLevel();
         }
         else
         {
@@ -51,19 +50,35 @@ public class MessManager : MonoBehaviour
         }
     }
 
-    void FinishLevel()
+    public void FinishLevel()
     {
+        if (levelFinished)
+            return;
+
+        levelFinished = true;
         if (gameManager)
         {
             gameManager.currentLevel++;
-            SceneManager.LoadScene("DialogScene");
         }
+        GoToDialog();
+    }
+    public void GoToDialog()
+    {
+        var curtainAnimator = GameObject.Find("Canvas/Curtain").GetComponent<Animator>();
+        curtainAnimator.SetTrigger("fadein");
+    }
+    public void LoadDialogScene()
+    {
+        SceneManager.LoadScene("DialogScene");
     }
 
     void FailLevel()
     {
-        gameManager.failed = true;
-        SceneManager.LoadScene("DialogScene");
+        if (gameManager)
+        {
+            gameManager.failed = true;
+        }
+        GoToDialog();
     }
 
     public bool IsThereActiveFood()

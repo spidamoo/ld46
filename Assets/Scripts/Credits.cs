@@ -19,6 +19,11 @@ public class Credits : MonoBehaviour
 
     public void GoBack()
     {
+        var curtainAnimator = GameObject.Find("Canvas/Curtain").GetComponent<Animator>();
+        curtainAnimator.SetTrigger("fadein");
+    }
+    public void LoadMenuScene()
+    {
         SceneManager.LoadScene("MainMenuScene");
     }
 }

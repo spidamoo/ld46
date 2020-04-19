@@ -7,7 +7,8 @@ using UnityEngine.SceneManagement;
 public class DialogManager : MonoBehaviour
 {
     public List<string> phrases;
-    public int currentPhrase = 0;
+    public int currentPhrase = -1;
+    public string nextScene = "MessScene";
 
     private GameManager gameManager;
     private Text text;
@@ -39,11 +40,33 @@ public class DialogManager : MonoBehaviour
     }
     void Start()
     {
-        text.text = phrases[currentPhrase];
+        // NextPhrase();
     }
 
     void Update()
     {
+    }
+
+    public void EatPlayer()
+    {
+        var kingAnimator = GameObject.Find("Canvas/The King").GetComponent<Animator>();
+        kingAnimator.SetTrigger("eatplayer");
+    }
+    public void GoToMess()
+    {
+        var curtainAnimator = GameObject.Find("Canvas/Curtain").GetComponent<Animator>();
+        curtainAnimator.SetTrigger("fadein");
+        nextScene = "MessScene";
+    }
+    public void GoToCredits()
+    {
+        var curtainAnimator = GameObject.Find("Canvas/Curtain").GetComponent<Animator>();
+        curtainAnimator.SetTrigger("fadein");
+        nextScene = "CreditsScene";
+    }
+    public void LoadNextScene()
+    {
+        SceneManager.LoadScene(nextScene);
     }
 
     public void NextPhrase()
@@ -56,6 +79,8 @@ public class DialogManager : MonoBehaviour
         else
         {
             text.text = phrases[currentPhrase];
+            var kingAnimator = GameObject.Find("Canvas/The King").GetComponent<Animator>();
+            kingAnimator.SetTrigger("talk");
         }
     }
 
@@ -65,23 +90,23 @@ public class DialogManager : MonoBehaviour
         {
             if (gameManager.failed)
             {
-                SceneManager.LoadScene("MessScene");
+                EatPlayer();
             }
             else
             {
                 if (gameManager.currentLevel >= gameManager.levels.Count)
                 {
-                    SceneManager.LoadScene("CreditsScene");
+                    GoToCredits();
                 }
                 else
                 {
-                    SceneManager.LoadScene("MessScene");
+                    GoToMess();
                 }
             }
         }
         else
         {
-            SceneManager.LoadScene("MessScene");
+            GoToMess();
         }
     }
 }
