@@ -4,17 +4,18 @@ using UnityEngine;
 
 [System.Serializable]
 public class LevelSetting {
-    public List<string> introPhrases;
+    public List<DialogPhrase> introPhrases;
     public GameObject foodGenerator;
 }
 
 public class GameManager : MonoBehaviour
 {
+    public bool englishVersion;
     public int currentLevel = 0;
     public List<LevelSetting> levels;
-    public List<string> lastWords;
+    public List<DialogPhrase> lastWords;
     public bool failed = false;
-    public List<string> failWords;
+    public List<DialogPhrase> failWords;
 
     void Awake()
     {
@@ -35,5 +36,14 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void TurnEnglishVersion(bool on)
+    {
+        englishVersion = on;
+    }
+    public void TurnRussianVersion(bool on)
+    {
+        englishVersion = !on;
     }
 }

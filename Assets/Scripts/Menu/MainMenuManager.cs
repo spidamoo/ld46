@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuManager : MonoBehaviour
 {
+    // public Texture2D pushCursor;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,7 +15,6 @@ public class MainMenuManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
 
     public void StartGame()
@@ -25,5 +25,10 @@ public class MainMenuManager : MonoBehaviour
     public void LoadDialogScene()
     {
         SceneManager.LoadScene("DialogScene");
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }

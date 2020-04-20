@@ -119,6 +119,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nutrition: 3
   poison: 0
+  phrases:
+  - text: "\u0425\u043B\u0435\u0431 \u0432\u0441\u0435\u043C\u0443 \u0433\u043E\u043B\u043E\u0432\u0430!"
+    englishText: Bread is important!
+    sound: {fileID: 8300000, guid: 8feacedadc4ae3040827fbd302ead426, type: 3}
+  - text: "\u0425\u043B\u0435\u0431\u0443\u0448\u0435\u043A!"
+    englishText: Bread is important!
+    sound: {fileID: 8300000, guid: 4b7949d45fddbb043aca79f67c62c14b, type: 3}
+  - text: "\u0421 \u0445\u043B\u0435\u0431\u043E\u043C \u0432\u0441\u0435 \u0432\u043A\u0443\u0441\u043D\u0435\u0435!"
+    englishText: Bread is important!
+    sound: {fileID: 8300000, guid: f9053111dc9e97345bfab0dd8b07dc11, type: 3}
 --- !u!60 &5877249237867634365
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -155,4 +165,12 @@ PolygonCollider2D:
       - {x: -0.17777778, y: 0.0055555557}
       - {x: -0.23333333, y: -0.03888889}
       - {x: -0.21666667, y: -0.16111112}
-      - {x: -0.20729733, y: -0.21626246}
+      - {x: -0.28333333, y: -0.18333334}
+      - {x: -0.33888888, y: -0.25555557}
+      - {x: -0.34444445, y: -0.29444444}
+      - {x: -0.34444445, y: -0.33333334}
+      - {x: -0.32777777, y: -0.36666667}
+      - {x: -0.05, y: -0.36666667}
+      - {x: -0.03888889, y: -0.32222223}
+      - {x: -0.06111111, y: -0.2888889}
+      - {x: -0.12222222, y: -0.23888889}

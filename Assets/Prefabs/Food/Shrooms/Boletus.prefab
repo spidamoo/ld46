@@ -119,6 +119,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nutrition: 2.5
   poison: 0
+  phrases:
+  - text: "\u0411\u043E\u0440\u043E\u0432\u0438\u043A! \u041A\u043E\u0440\u043E\u043B\u044C
+      \u0433\u0440\u0438\u0431\u043E\u0432!"
+    englishText: Boletus! The king of shrooms!
+    sound: {fileID: 8300000, guid: 8feacedadc4ae3040827fbd302ead426, type: 3}
+  - text: "\u0411\u043E\u0440\u043E\u0432\u0438\u0447\u043E\u043A!"
+    englishText: Boletus! The king of shrooms!
+    sound: {fileID: 8300000, guid: 4b7949d45fddbb043aca79f67c62c14b, type: 3}
+  - text: "\u0411\u0435\u043B\u044B\u0439 \u0433\u0440\u0438\u0431!"
+    englishText: Boletus! The king of shrooms!
+    sound: {fileID: 8300000, guid: f9053111dc9e97345bfab0dd8b07dc11, type: 3}
 --- !u!60 &5877249237867634365
 PolygonCollider2D:
   m_ObjectHideFlags: 0

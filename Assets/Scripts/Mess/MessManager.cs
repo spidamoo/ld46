@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class MessManager : MonoBehaviour
 {
+    public Texture2D pushCursor;
+
     private GameManager gameManager;
     private FoodGenerator generator;
     private King theKing;
@@ -37,6 +39,15 @@ public class MessManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if ( Input.GetMouseButton(0) )
+        {
+            Cursor.SetCursor(pushCursor, Vector2.zero, CursorMode.Auto);
+        }
+        else
+        {
+            Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+        }
+
         if ( generator.foodLeft <= 0 && !IsThereActiveFood() )
         {
             FinishLevel();

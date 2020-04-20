@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7134723974241738834}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.14, y: 1.37, z: -0.8378906}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -119,6 +119,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nutrition: 3
   poison: 0
+  phrases:
+  - text: "\u041A\u0430\u0440\u0442\u043E\u0444\u0435\u043B\u044C \u044D\u0442\u043E
+      \u0436\u0438\u0437\u043D\u044C!"
+    englishText: Hot potato!
+    sound: {fileID: 8300000, guid: 8feacedadc4ae3040827fbd302ead426, type: 3}
+  - text: "\u041A\u0430\u0440\u0442\u043E\u0447\u0448\u0435\u0447\u043A\u0430!"
+    englishText: Hot potato!
+    sound: {fileID: 8300000, guid: 4b7949d45fddbb043aca79f67c62c14b, type: 3}
+  - text: "\u0422\u0443 \u043C\u0430\u0447 \u043A\u0430\u0440\u0442\u043E\u0448\u0430!"
+    englishText: Hot potato!
+    sound: {fileID: 8300000, guid: f9053111dc9e97345bfab0dd8b07dc11, type: 3}
 --- !u!60 &5877249237867634365
 PolygonCollider2D:
   m_ObjectHideFlags: 0

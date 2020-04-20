@@ -119,6 +119,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nutrition: -3
   poison: 0
+  phrases:
+  - text: "\u0427\u0442\u043E \u0437\u0430 \u043C\u0435\u0440\u0437\u043E\u0441\u0442\u044C!"
+    englishText: Disgusting!
+    sound: {fileID: 8300000, guid: fdfd897d2acaadb4698db4f49ef912e2, type: 3}
+  - text: Fugu fish, poisonous...
+    englishText: 
+    sound: {fileID: 8300000, guid: 0ea5f0b554dd48d46bf4d6f5821ae573, type: 3}
 --- !u!60 &5877249237867634365
 PolygonCollider2D:
   m_ObjectHideFlags: 0

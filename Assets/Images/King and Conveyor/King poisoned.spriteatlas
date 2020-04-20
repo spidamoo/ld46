@@ -31,24 +31,18 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: bc1ed880da1510c4694d400c691131fe, type: 3}
-    totalSpriteSurfaceArea: 3430000
+    totalSpriteSurfaceArea: 1960000
     bindAsDefault: 1
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
-  - {fileID: 21300000, guid: 2b071c133b0cbc5498b93895bde6924b, type: 3}
-  - {fileID: 21300000, guid: 32d999b4810040e4994131fbbee268b9, type: 3}
-  - {fileID: 21300000, guid: 3db8a7f6caa1a65479b91d06b9a1ec24, type: 3}
-  - {fileID: 21300000, guid: 1ebd0518eae8c474d9c4957fbbcecb09, type: 3}
-  - {fileID: 21300000, guid: ddc94d892e5fd3949991965cb2a99260, type: 3}
-  - {fileID: 21300000, guid: 02f84acea58d06949852d28ace2d590d, type: 3}
-  - {fileID: 21300000, guid: 654a802f7301dfc4486daeb948d88646, type: 3}
+  - {fileID: 21300000, guid: b8dfdbf1fd8ebde41a85d2403d0d91db, type: 3}
+  - {fileID: 21300000, guid: 3d783e02dc0975143998c010d7e7bf29, type: 3}
+  - {fileID: 21300000, guid: 088f949459633a744880d58f4ee44645, type: 3}
+  - {fileID: 21300000, guid: eb91853fa8b77834caacef22bb8d965a, type: 3}
   m_PackedSpriteNamesToIndex:
-  - kingfatpoison-Sheet6
-  - kingfatpoison-Sheet1
-  - kingfatpoison-Sheet7
-  - kingfatpoison-Sheet4
-  - kingfatpoison-Sheet2
-  - kingfatpoison-Sheet5
-  - kingfatpoison-Sheet3
+  - kingposon3
+  - 'kingposon1 '
+  - kingposon2
+  - kingposon4
   m_Tag: King poisoned
   m_IsVariant: 0

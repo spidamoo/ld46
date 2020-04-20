@@ -119,6 +119,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nutrition: -3
   poison: 0
+  phrases:
+  - text: "\u041A\u0443\u0440\u0438\u0446\u0430 \u043E\u0442\u0440\u0430\u0432\u043B\u0435\u043D\u0430!"
+    englishText: Chicken is poisoned!
+    sound: {fileID: 8300000, guid: fdfd897d2acaadb4698db4f49ef912e2, type: 3}
+  - text: "\u041E\u0442\u0440\u0430\u0432\u0430!!"
+    englishText: Chicken is poisoned!
+    sound: {fileID: 8300000, guid: 0ea5f0b554dd48d46bf4d6f5821ae573, type: 3}
 --- !u!60 &5877249237867634365
 PolygonCollider2D:
   m_ObjectHideFlags: 0

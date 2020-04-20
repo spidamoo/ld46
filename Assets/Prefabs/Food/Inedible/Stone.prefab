@@ -119,6 +119,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nutrition: -3
   poison: 0
+  phrases:
+  - text: "\u0422\u0430\u043A\u043E\u0435 \u043D\u0435 \u043F\u0440\u043E\u0436\u0435\u0432\u0430\u0442\u044C!"
+    englishText: Can't chew on that!
+    sound: {fileID: 8300000, guid: fdfd897d2acaadb4698db4f49ef912e2, type: 3}
+  - text: "\u0414\u0430 \u044D\u0442\u043E \u0436\u0435 \u043F\u0440\u043E\u0441\u0442\u043E
+      \u043A\u0430\u043C\u0435\u043D\u044C!"
+    englishText: This is plain rock!
+    sound: {fileID: 8300000, guid: c533bf896e722b14c86da7bbcf80edb0, type: 3}
 --- !u!60 &5877249237867634365
 PolygonCollider2D:
   m_ObjectHideFlags: 0
