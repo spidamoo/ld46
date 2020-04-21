@@ -392,7 +392,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Thanks for playing Meal to Kill!\nThe King \u2014 Andrey Ranyar\nArt \u2014
-    Crescent Moon\nMusic \u2014 Alyona Sokolova\nCode \u2014 Vlad Zatoloka\n\nMade
+    Crescent Moon\nMusic & SFX \u2014 Alyona Sokolova\nCode \u2014 Vlad Zatoloka\n\nMade
     for Ludum Dare 46"
 --- !u!222 &510379400
 CanvasRenderer:

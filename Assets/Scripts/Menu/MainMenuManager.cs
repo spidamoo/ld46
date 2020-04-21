@@ -2,14 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainMenuManager : MonoBehaviour
 {
-    // public Texture2D pushCursor;
-    // Start is called before the first frame update
+    private string nextScene = "DialogScene";
+    private GameManager gameManager;
+
+    void Awake()
+    {
+        gameManager = GameObject.Find("/GameManager").GetComponent<GameManager>();
+    }
     void Start()
     {
-        
+        if (gameManager.englishVersion)
+        {
+            GameObject.Find("/Canvas/Lang Toggles/Toggle En").GetComponent<Toggle>().isOn = true;
+        }
+        else
+        {
+            GameObject.Find("/Canvas/Lang Toggles/Toggle Ru").GetComponent<Toggle>().isOn = true;
+        }
     }
 
     // Update is called once per frame
@@ -17,14 +30,16 @@ public class MainMenuManager : MonoBehaviour
     {
     }
 
-    public void StartGame()
+    public void GoToScene(string scene)
     {
         var curtainAnimator = GameObject.Find("Canvas/Curtain").GetComponent<Animator>();
         curtainAnimator.SetTrigger("fadein");
+
+        nextScene = scene;
     }
-    public void LoadDialogScene()
+    public void LoadNextScene()
     {
-        SceneManager.LoadScene("DialogScene");
+        SceneManager.LoadScene(nextScene);
     }
 
     public void QuitGame()

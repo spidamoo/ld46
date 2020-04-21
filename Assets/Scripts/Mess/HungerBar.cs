@@ -35,6 +35,7 @@ public class HungerBar : MonoBehaviour
         }
         else
         {
+            outline.effectDistance = Vector2.zero;
         }
     }
 }

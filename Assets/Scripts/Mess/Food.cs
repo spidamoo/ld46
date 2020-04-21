@@ -8,7 +8,13 @@ public class Food : MonoBehaviour
     public float nutrition;
     public float poison;
     public List<DialogPhrase> phrases;
-    // Start is called before the first frame update
+
+    private MessManager manager;
+
+    void Awake()
+    {
+        manager = GameObject.Find("/MessManager").GetComponent<MessManager>();
+    }
     void Start()
     {
         
@@ -34,6 +40,8 @@ public class Food : MonoBehaviour
             Vector2.right * sideForce + Vector2.up * upForce, ForceMode2D.Impulse
         );
         gameObject.GetComponent<Rigidbody2D>().AddTorque(rotation, ForceMode2D.Impulse);
+
+        manager.PushFood(this);
 
         // Debug.Log( "World point " + point );
     }

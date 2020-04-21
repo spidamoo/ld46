@@ -59,9 +59,10 @@ public class King : MonoBehaviour
     {
         hunger += food.nutrition;
         health -= food.poison;
+        bool badFood = food.poison > 0.0f || food.nutrition < 0.0f;
 
         Debug.Log(string.Format("The King eats {0}, n: {1} p: {2}", food.name, food.nutrition, food.poison));
-        if (food.poison > 0.0f || food.nutrition < 0.0f)
+        if (badFood)
         {
             animator.SetTrigger("poisoned");
         }
@@ -75,6 +76,7 @@ public class King : MonoBehaviour
                 GetComponent<AudioSource>().Play();
             }
             commentText.text = comment.GetText(gameManager && gameManager.englishVersion);
+            commentText.color = badFood ? Color.red : Color.green;
         }
     }
 

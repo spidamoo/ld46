@@ -2,24 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MessManager : MonoBehaviour
 {
     public Texture2D pushCursor;
+    public DialogPhrase exitPhrase;
 
     private GameManager gameManager;
     private FoodGenerator generator;
     private King theKing;
     private bool levelFinished = false;
+    private float exitTimer = -1.0f;
+    private GameObject exitNotification;
+    private AudioSource pushSound;
     void Awake()
     {
-        theKing = GameObject.Find("The King").GetComponent<King>();
-        var gmo = GameObject.Find("GameManager");
+        theKing = GameObject.Find("/The King").GetComponent<King>();
+        var gmo = GameObject.Find("/GameManager");
         if (gmo)
         {
             gameManager = gmo.GetComponent<GameManager>();
-            Destroy( GameObject.Find("Food Generator") );
-            var oldGenerator = GameObject.Find("Food Generator").GetComponent<FoodGenerator>();
+            var oldGenerator = GameObject.Find("/Food Generator").GetComponent<FoodGenerator>();
+            Destroy( GameObject.Find("/Food Generator") );
             generator = Instantiate( gameManager.levels[gameManager.currentLevel].foodGenerator ).GetComponent<FoodGenerator>();
             generator.transform.position = oldGenerator.transform.position;
 
@@ -27,13 +32,19 @@ public class MessManager : MonoBehaviour
         }
         else
         {
-            generator = GameObject.Find("Food Generator").GetComponent<FoodGenerator>();
+            generator = GameObject.Find("/Food Generator").GetComponent<FoodGenerator>();
         }
 
         theKing.GetComponent<Animator>().SetFloat("open mouth speed", generator.conveyorSpeed);
+
+        exitNotification = GameObject.Find("/Canvas/Exit Notification");
+
+        pushSound = transform.Find("Push Sound").GetComponent<AudioSource>();
     }
     void Start()
     {
+        exitNotification.SetActive(false);
+        exitNotification.GetComponent<Text>().text = exitPhrase.GetText(gameManager && gameManager.englishVersion);
     }
 
     // Update is called once per frame
@@ -59,6 +70,28 @@ public class MessManager : MonoBehaviour
                 FailLevel();
             }
         }
+
+        if (exitTimer > 0.0f)
+        {
+            exitTimer -= Time.deltaTime;
+            if (exitTimer <= 0.0f)
+            {
+                exitNotification.SetActive(false);
+            }
+
+            if ( Input.GetKeyDown("escape") )
+            {
+                SceneManager.LoadScene("MainMenuScene");
+            }
+        }
+        else
+        {
+            if ( Input.GetKeyDown("escape") )
+            {
+                exitTimer = 2.0f;
+                exitNotification.SetActive(true);
+            }
+        }
     }
 
     public void FinishLevel()
@@ -75,7 +108,7 @@ public class MessManager : MonoBehaviour
     }
     public void GoToDialog()
     {
-        var curtainAnimator = GameObject.Find("Canvas/Curtain").GetComponent<Animator>();
+        var curtainAnimator = GameObject.Find("/Canvas/Curtain").GetComponent<Animator>();
         curtainAnimator.SetTrigger("fadein");
     }
     public void LoadDialogScene()
@@ -96,5 +129,10 @@ public class MessManager : MonoBehaviour
     {
         Debug.Log("active food " + GameObject.FindGameObjectsWithTag("Food").Length);
         return GameObject.FindGameObjectsWithTag("Food").Length > 0;
+    }
+
+    public void PushFood(Food food)
+    {
+        pushSound.Play();
     }
 }

@@ -88,7 +88,7 @@ public class DialogManager : MonoBehaviour
             if (phraseAudio.clip)
             {
                 phraseAudio.Play();
-                GameObject.Find("Canvas/The King").GetComponent<KingDialog>().StartTalking(phraseAudio.clip.length);
+                GameObject.Find("Canvas/The King").GetComponent<KingDialog>().StartTalking(phraseAudio.clip.length - 1.0f);
             }
             else
             {
